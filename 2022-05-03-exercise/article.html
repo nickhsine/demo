@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文章頁 demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <script src="main.js"></script> -->
+    <style>
+        /* * 是指所有的元素 */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .mobile-layout {
+            width: 375px;
+            background-color: #f1f1f1;
+
+            padding-bottom: 50px;
+        }
+
+        /* horizontal center 水平置中 */
+        .hc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 50px;
+            color: #000;
+
+            width: 326px;
+
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 50px;
+            color: #404040;
+
+            width: 326px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        /*
+        .header {
+            width: 335px;
+            padding-top: 22px;
+        }
+        */
+        .header {
+            width: 100%;
+            height: 80px;
+            position: relative;
+            top: 0px;
+            background-color: #f1f1f1;
+        }
+
+        .header>a {
+            vertical-align: middle;
+        }
+
+        /* header > hambuger */
+        .hambuger {
+            width: 28px;
+            display: inline-block;
+            margin-left: 83px;
+
+            vertical-align: middle;
+
+            position: absolute;
+            top: 50%;
+            right: 20px;
+
+            transform: translateY(-50%);
+        }
+
+        .hambuger-line {
+            border-top: 3px solid #C71B0A;
+            border-radius: 2px;
+            margin-top: 6px;
+        }
+
+        /* 覆蓋掉瀏覽器預設的 margin */
+        figure {
+            margin: 0;
+        }
+
+        .hero-image {
+            margin-top: 34px;
+        }
+
+        /* 放在 .hero-image class 底下 (parent/child) 的 figcaption */
+        .hero-image>figcaption {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #808080;
+            margin-top: 20px;
+            width: 360px;
+        }
+
+        .article-image {
+            margin-top: 60px;
+        }
+
+        .article-image>figcaption {
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: 0.4px;
+            color: #999;
+            width: 235px;
+            margin-left: auto;
+            margin-right: 15px;
+            margin-top: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #D0A67D;
+        }
+
+        .metadata {
+            margin-top: 51px;
+            width: 304px;
+        }
+
+        .category {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #A67A44;
+
+            margin-top: -5px;
+        }
+
+        .published-date {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #808080;
+
+            margin-top: -5px;
+        }
+
+        .separation-line {
+            height: 15px;
+            border-top: 1px solid #D0D0D0;
+            border-right: 1px solid #D0D0D0;
+        }
+
+        /* 元素同使擁有 .separation-line class 和 .second class  */
+        .separation-line.second {
+            margin-top: 17px;
+        }
+
+        .separation-line.third {
+            border-top: unset;
+            border-bottom: 1px solid #D0D0D0;
+        }
+
+        .toolbox {
+            margin-top: 23px;
+        }
+
+        .toolbox>img {
+            vertical-align: middle;
+            margin-left: 17px;
+        }
+
+        .toolbox>img.first-child {
+            margin-left: 0;
+        }
+
+        .article-body {
+            margin-top: 65px;
+        }
+
+        .article-body > p {
+            width: 300px;
+            margin-left: 38px;
+            margin-bottom: 40px;
+            margin-top: 0px;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 0.5px;
+            color: #404040;
+        }
+
+        .bg-white {
+            background-color: #fff;
+            margin-left: 0;
+            width: 375px;
+            padding-left: 38px;
+            padding-right: 38px;
+            padding-top: 14px;
+            padding-bottom: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- mobile version -->
+    <div class="mobile-layout">
+
+        <!-- article page 文章頁 -->
+
+        <!-- header -->
+        <div class="header hc">
+            <!-- header > logo -->
+            <a href="https://twreporter.org" target="_blank">
+                <img style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%);"
+                    src="./assets/images/twreporter-logo.svg">
+            </a>
+            <!-- header > hambuger -->
+            <div class="hambuger">
+                <div style="margin-top: 0;" class="hambuger-line"></div>
+                <div class="hambuger-line"></div>
+                <div class="hambuger-line"></div>
+            </div>
+        </div>
+
+        <!-- subtitle 副標 -->
+        <h2 class="hc">Reporter Saturday Features</h2>
+
+        <!-- title 主標 -->
+        <h1 class="hc">【山思而行】登山中的死亡，對生命的凝視</h1>
+
+        <!-- hero image -->
+        <figure class="hero-image">
+
+            <!-- hero image > img -->
+            <img src="./assets/images/hero-image-mobile.jpg">
+            <!-- hero image > img description -->
+            <figcaption class="hc">
+                登上山峰之途，就是在死亡的陰影之下，動用自身全部的感官與技藝，設法避開那些遭致危機的陷阱。圖為2016年2月，一支國際登山隊正跨越珠穆朗瑪峰基地營附近的冰川。（攝影／AP／Tashi
+                Sherpa／達志影像）</figcaption>
+        </figure>
+
+        <!-- metadata -->
+        <div class="metadata hc">
+            <div class="separation-line"></div>
+            <!-- metadata > category -->
+            <div class="category">環境・教育</div>
+
+            <div class="separation-line second">
+            </div>
+            <!-- metdata > published date -->
+            <div class="published-date">刊出日期 2020/2/28</div>
+
+            <!-- metadata > tags -->
+
+            <div class="separation-line third"></div>
+
+            <!-- metadata toolbox -->
+            <div class="toolbox">
+                <!-- bookmark -->
+                <img class="first-child" src="./assets/images/add-bookmark.svg">
+                <!-- change font size  -->
+                <img src="./assets/images/tool-text.svg">
+                <!-- print -->
+                <img src="./assets/images/tool-print.svg">
+                <!-- line -->
+                <img src="./assets/images/share-line.svg">
+                <!-- facebook -->
+                <img src="./assets/images/share-fb.svg">
+                <!-- twitter -->
+                <img src="./assets/images/share-twitter.svg">
+            </div>
+        </div>
+
+        <!-- article body -->
+        <div class="article-body">
+            <p>
+                講到登山，普遍的印象可能是壯闊的山景，雲海朝霞萬丈金芒；也可能是山上人與人之間的情誼，過地形時伸手扶一把，或濕冷雨天一碗熱呼呼的泡麵。我們在山中感受生命各種美好，汲取養分。就算是逆境，痛苦會過去，美會留下，回到人間後依舊能量滿滿再度出發。
+            </p>
+            <p>
+                做為人，不知為何，我們傾向記憶美好，卻遺忘過程的苦痛。但我卻想，這是否讓我們理解、記憶一件事情性質的方式，也隨之產生偏誤？
+            </p>
+            <p>
+                我想說的是，登山是件會死人的運動
+            </p>
+            <p class="bg-white">
+                某程度上，登上山巔之途，就是在死亡的陰影之下，動用自身全部的感官與技藝，設法避開那些遭致危機的陷阱。這樣的經驗本身，就是一種回報，高處的風景與抵達最高點的滿足，則是額外的嘉獎。
+            </p>
+
+            <!-- 內文圖片 -->
+            <figure class="article-image">
+                <img src="assets/images/image-9.jpg">
+                <figcaption>2017年3月，一隊登山者朝向尼泊爾羅布崎的登山營地前進。（攝影／AP／Tashi Sherpa／達志影像）</figcaption>
+            </figure>
+
+        </div>
+        <!-- 回到頂端的 icon -->
+        <img style="position: fixed; left: 330px; bottom: 10px;" src="assets/images/back-to-top-mobile.svg">
+        <!-- footer -->
+    </div>
+
+
+</body>
+
+</html>
